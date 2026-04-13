@@ -1,0 +1,404 @@
+/* ===============================
+   RESET + BASE
+================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", Arial, sans-serif;
+}
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ffffff;
+    padding: 15px 30px;
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.1);
+    border: 2px solid #000000;
+}
+
+.logo img {
+    height: 45px; /* Ajuste o tamanho da logo */
+    height: 80px;
+    left: 120px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #00ff2a;
+    font-weight: 600;
+}
+
+.nav-links li a:hover {
+    color: #007BFF;
+}
+
+/* ===============================
+   CABEÇALHO
+================================= */
+header {
+    background: #ffffff;
+    padding: 18px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e6e6e6;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 700;
+    color: #000000;
+}
+
+nav a {
+    
+    margin-left: 22px;
+    text-decoration: none;
+    color: #000000;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav a:hover {
+     color: #64f305;
+}
+
+nav a.active {
+    color: #74ff02 !important;
+    font-weight: 700;
+}
+
+
+/* MOBILE FIX — imagens cortam menos */
+@media (max-width: 768px) {
+    
+}
+
+/* ===============================
+   HERO
+================================= */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: #ffffff;
+    margin-bottom: 40px;
+    
+}
+
+.hero h1 {
+    font-size: 32px;
+    color: #111;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #555;
+}
+
+/* ===============================
+   CARDS EM DESTAQUE (HUMANIZADO)
+================================= */
+.destaques {
+    padding: 20px 20px 50px;
+}
+
+.destaques h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 30px;
+    font-weight: 700;
+}/* ===== CARDS NO ESTILO DE PORTAL DE NOTÍCIAS ===== */
+
+.cards-news {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    margin-top: 25px;
+    
+}
+
+.news-card {
+    text-decoration: none;
+    color: #fff;
+    border: 3px solid rgb(0, 0, 0);
+   
+}
+
+.news-img {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+.news-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .3s ease-in-out;
+}
+
+.news-card:hover img {
+    transform: scale(1.08);
+}
+
+.news-author {
+    display: block;
+    margin-top: 10px;
+    font-size: 12px;
+    color: #4aa3ff;  /* azul padrão dos portais */
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.news-title {
+    margin-top: 6px;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 1.3rem;
+    color: #000000;
+}
+
+/* ===============================
+   PÁGINA INTERNA (ARTIGOS)
+================================= */
+.post-header {
+    padding: 50px 25px 20px;
+    text-align: center;
+    background: #ffffff;
+    margin-bottom: 20px;
+}
+
+.post-header h1 {
+    font-size: 32px;
+    font-weight: 800;
+    color: #111;
+}
+
+.post-header .sub {
+    font-size: 17px;
+    color: #666;
+    margin-top: 10px;
+}
+
+.conteudo-post {
+    max-width: 850px;
+    margin: auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+    margin-bottom: 60px;
+}
+
+.conteudo-post h2 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-size: 22px;
+    color: #222;
+}
+
+.conteudo-post p, .conteudo-post ul {
+    color: #555;
+    font-size: 17px;
+    margin-bottom: 15px;
+}
+
+.conteudo-post ul {
+    padding-left: 25px;
+}
+
+/* ===============================
+   RODAPÉ
+================================= */
+footer {
+    background: #fafafa;
+    text-align: center;
+    padding: 25px;
+    color: #777;
+    margin-top: 50px;
+    font-size: 15px;
+    border-top: 1px solid #eee;
+}
+
+/* ===============================
+   RESPONSIVIDADE
+================================= */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 10px;
+        padding: 20px;
+    }
+
+    .hero h1 {
+        font-size: 26px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+/* ARTICLE SECTION */
+.article-section {
+    background: #ffffff;
+    color: #0e1a3a;
+    padding-bottom: 60px;
+}
+
+/* Banner 16:9 */
+.article-banner img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    border-bottom: 4px solid #0e1a3a;
+}
+
+.article-section .container {
+   max-width: 900px;
+   margin: auto;
+   padding: 20px;
+}
+
+.article-section h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #0e1a3a;
+}
+
+.article-section h2 {
+    margin-top: 30px;
+    font-size: 1.4rem;
+    color: #102c60;
+}
+
+.article-section p,
+.article-section ul {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.article-section ul {
+    margin-left: 20px;
+}
+/* CONTAINER */
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+/* TEXTOS */
+h1 {
+  color: #0a2540;
+  font-size: 32px;
+}
+
+h2 {
+  color: #1a73e8;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+h3 {
+  margin-top: 30px;
+  color: #0a2540;
+}
+
+p {
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.meta {
+  color: #777;
+  font-size: 14px;
+}
+
+/* LISTA */
+ul {
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+/* DESTAQUE */
+.highlight {
+  background: #e8f0fe;
+  padding: 15px;
+  border-left: 4px solid #1a73e8;
+  margin: 25px 0;
+  font-weight: bold;
+}
+
+/* COMPARAÇÃO */
+.compare {
+  background: #f9fafb;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+/* CTA */
+.cta {
+  background: linear-gradient(135deg, #1a73e8, #0a2540);
+  color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.cta h2 {
+  color: #fff;
+}
+
+.cta a {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 25px;
+  background: #fff;
+  color: #1a73e8;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.cta a:hover {
+  background: #dbeafe;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+}
